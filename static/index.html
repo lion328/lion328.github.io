@@ -1,104 +1,34 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<meta charset="utf-8">
-<title>lion328</title>
-<script>
-document.onkeydown = function (e) {
-    var input = document.getElementById("input");
-    var output = document.getElementById("command_output");
+  <head>
+    <meta charset="utf-8">
+    <title>lion328</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        <span class="heading">lion328</span>
+        <br>
+        =======
+      </p>
 
-    var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+      <p>
+        Minecraft<br>
+        ---- <a href="https://github.com/lion328/thaifixes">ThaiFixes</a>
+      </p>
 
-    if (charCode) {
+      <p>
+        <a href="https://github.com/lion328">Github</a><br>
+        <a href="https://facebook.com/lion328.mcd">Facebook Page</a>
+      </p>
 
-        switch (charCode) {
-            case 8:
-                input.innerText = input.innerText.substring(0, input.innerText.length - 1);
+      <p>
+        > <span id="input"></span><span class="underscore">_</span>
+      </p>
+      <span id="command_output"></span>
+    </div>
 
-                return;
-            case 13:
-                if (input.innerText == "") {
-                    return;
-                }
-
-                input.innerText = "";
-                output.innerText = "[" + Date.now() + "] unimplemented";
-
-                return;
-        }
-
-        input.innerText += String.fromCharCode(charCode);
-    }
-};
-</script>
-<style>
-body {
-    background-color: #000;
-    color: #fff;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin: 1em;
-}
-
-a:link, a:visited {
-    color: #fff;
-}
-
-.heading {
-    color: #f00;
-    animation: headbow 5s linear infinite;
-    text-transform: initial !important;
-}
-
-.command {
-    max-width: 50px !important;
-}
-
-.underscore {
-  animation: blinker 1s step-start infinite;
-}
-
-#command_output {
-    color: #f00;
-}
-
-@keyframes blinker {  
-    50% {
-        opacity: 0;
-    }
-}
-
-@keyframes headbow {
-    0% {
-        color: #f00;
-    }
-
-    33% {
-        color: #0f0;
-    }
-
-    66% {
-        color: #00f;
-    }
-}
-</style>
-</head>
-<body>
-<pre>
-<span class="heading">lion328</span>
-=======
-
-Minecraft
----- <a href="https://github.com/lion328/thaifixes">ThaiFixes</a>
-
-<a href="https://github.com/lion328">Github</a>
-<a href="https://facebook.com/lion328.mcd">Facebook Page</a>
-
-<div class="command">> <span id="input"></span><span class="underscore">_</span></div>
-<span id="command_output"></span>
-</pre>
-
-<script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
