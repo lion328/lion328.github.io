@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+
 body {
     background-color: #000;
     color: #fff;
     font-size: 2rem;
-    text-transform: uppercase;
     margin: 1em;
 }
 
 #screen {
-    font-family: monospace;
+    font-family: 'Anonymous Pro', monospace;
 }
 
 a:link, a:visited {
@@ -18,6 +19,7 @@ a:link, a:visited {
     color: #f00;
     animation: headbow 5s linear infinite;
     text-transform: initial !important;
+    font-weight: bold;
 }
 
 .underscore {
@@ -44,6 +46,6 @@ a:link, a:visited {
     }
 
     66% {
-        color: #00f;
+        color: #0bf;
     }
 }
