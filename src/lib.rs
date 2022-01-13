@@ -21,10 +21,12 @@ pub fn start() -> Result<(), JsValue> {
 }
 
 fn setup_keypress(document: &Document) {
-    let input = document.get_element_by_id("input").unwrap();
+    let input = document.get_element_by_id("input-display").unwrap();
     let command_output = document.get_element_by_id("command_output").unwrap();
 
     let callback = Closure::wrap(Box::new(move |event: KeyboardEvent| {
+        event.prevent_default();
+
         let input = input.dyn_ref::<HtmlElement>().unwrap();
         let command_output = command_output.dyn_ref::<HtmlElement>().unwrap();
 
@@ -49,7 +51,7 @@ fn setup_keypress(document: &Document) {
 }
 
 fn setup_keydown(document: &Document) {
-    let input = document.get_element_by_id("input").unwrap();
+    let input = document.get_element_by_id("input-display").unwrap();
 
     let callback = Closure::wrap(Box::new(move |event: KeyboardEvent| {
         let input = input.dyn_ref::<HtmlElement>().unwrap();
